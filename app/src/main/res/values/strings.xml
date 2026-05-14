@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HealthFit</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_glucose">Glucose</string>
+    <string name="title_blood_pressure">Blood Pressure</string>
+    <string name="title_activity">Activity</string>
+    <string name="title_history">History</string>
+</resources>

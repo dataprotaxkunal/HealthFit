@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_dashboard">
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.healthfit.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_glucose"
+        android:name="com.healthfit.ui.glucose.GlucoseFragment"
+        android:label="@string/title_glucose" />
+
+    <fragment
+        android:id="@+id/navigation_blood_pressure"
+        android:name="com.healthfit.ui.bloodpressure.BloodPressureFragment"
+        android:label="@string/title_blood_pressure" />
+
+    <fragment
+        android:id="@+id/navigation_activity"
+        android:name="com.healthfit.ui.activity.ActivityFragment"
+        android:label="@string/title_activity" />
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.healthfit.ui.history.HistoryFragment"
+        android:label="@string/title_history" />
+
+</navigation>

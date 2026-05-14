@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:title="@string/title_dashboard" />
+
+    <item
+        android:id="@+id/navigation_glucose"
+        android:icon="@android:drawable/ic_dialog_alert"
+        android:title="@string/title_glucose" />
+
+    <item
+        android:id="@+id/navigation_blood_pressure"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:title="@string/title_blood_pressure" />
+
+    <item
+        android:id="@+id/navigation_activity"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="@string/title_activity" />
+
+    <item
+        android:id="@+id/navigation_history"
+        android:icon="@android:drawable/ic_menu_recent_history"
+        android:title="@string/title_history" />
+
+</menu>
