@@ -15,31 +15,37 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthFit">
 
-        <activity android:name=".MainActivity" android:exported="true" android:windowSoftInputMode="adjustResize">
+        <activity android:name=".MainActivity" android:exported="true"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.glucose.AddGlucoseActivity" android:exported="false" android:windowSoftInputMode="adjustResize"/>
-        <activity android:name=".ui.bloodpressure.AddBPActivity" android:exported="false" android:windowSoftInputMode="adjustResize"/>
-        <activity android:name=".ui.activity.AddActivityActivity" android:exported="false" android:windowSoftInputMode="adjustResize"/>
-        <activity android:name=".ui.activity.LiveWorkoutActivity" android:exported="false" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".ui.glucose.AddGlucoseActivity" android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".ui.bloodpressure.AddBPActivity" android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".ui.activity.AddActivityActivity" android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".ui.activity.LiveWorkoutActivity" android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
 
-        <service android:name=".service.StepCounterService" android:exported="false" android:foregroundServiceType="health"/>
-        <service android:name=".service.GPSTrackingService" android:exported="false" android:foregroundServiceType="location"/>
+        <service android:name=".service.StepCounterService" android:exported="false"
+            android:foregroundServiceType="health"/>
+        <service android:name=".service.GPSTrackingService" android:exported="false"
+            android:foregroundServiceType="location"/>
 
         <receiver android:name=".receiver.BootReceiver" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
-
     </application>
 </manifest>
