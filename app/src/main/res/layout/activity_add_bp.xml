@@ -1,145 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_light"
+    android:orientation="vertical"
     android:padding="16dp">
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/etSystolic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:hint="Systolic"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2">
+    <EditText
+        android:id="@+id/etDiastolic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Diastolic"/>
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingEnd="8dp">
+    <EditText
+        android:id="@+id/etPulse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pulse"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Systolic (upper)"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:layout_marginBottom="4dp"/>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_systolic"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="e.g. 120"
-                        android:inputType="number"/>
-                </com.google.android.material.textfield.TextInputLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingStart="8dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Diastolic (lower)"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:layout_marginBottom="4dp"/>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_diastolic"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="e.g. 80"
-                        android:inputType="number"/>
-                </com.google.android.material.textfield.TextInputLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pulse Rate (bpm, optional)"
-            android:textStyle="bold"
-            android:textSize="14sp"
-            android:layout_marginBottom="4dp"/>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_pulse"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="e.g. 72"
-                android:inputType="number"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:id="@+id/tv_guide"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="#EEF2FF"
-            android:padding="12dp"
-            android:textSize="12sp"
-            android:lineSpacingExtra="4dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Notes (optional)"
-            android:textStyle="bold"
-            android:textSize="14sp"
-            android:layout_marginBottom="4dp"/>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_notes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Symptoms, time of day, etc."
-                android:inputType="textMultiLine"
-                android:minLines="2"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_save_bp"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="Save Reading"
-            android:textSize="16sp"
-            app:backgroundTint="@color/card_bp"/>
-
-    </LinearLayout>
-</ScrollView>
+    <Button
+        android:id="@+id/btnSaveBP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"/>
+</LinearLayout>
