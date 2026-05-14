@@ -19,21 +19,27 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Setup Gradle directly (bypasses wrapper JAR issue)
-        uses: gradle/actions/setup-gradle@v3
-        with:
-          gradle-version: '8.0'
+      - name: Fix Gradle wrapper
+        run: |
+          mkdir -p gradle/wrapper
+          cat > gradle/wrapper/gradle-wrapper.properties << 'EOF'
+          distributionBase=GRADLE_USER_HOME
+          distributionPath=wrapper/dists
+          distributionUrl=https\://services.gradle.org/distributions/gradle-8.1.1-bin.zip
+          zipStoreBase=GRADLE_USER_HOME
+          zipStorePath=wrapper/dists
+          EOF
+          curl -sL "https://github.com/gradle/gradle/raw/v8.1.1/gradle/wrapper/gradle-wrapper.jar" \
+            -o gradle/wrapper/gradle-wrapper.jar
+          chmod +x gradlew
 
       - name: Create local.properties
         run: echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
 
-      - name: Grant gradlew permission
-        run: chmod +x gradlew
-
       - name: Build Debug APK
-        run: gradle assembleDebug --stacktrace
+        run: ./gradlew assembleDebug --stacktrace
 
-      - name: Upload Debug APK
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: HealthFit-Debug-APK
